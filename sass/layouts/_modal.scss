@@ -1,0 +1,182 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+
+  transition: scale var(--animation-time) var(--transition-timing-function);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--animation-time) var(--transition-timing-function),
+    visibility var(--animation-time) var(--transition-timing-function);
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  background: var(--light-cl);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--animation-time) var(--transition-timing-function);
+
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%) scale(1);
+  &__button-close {
+    position: absolute;
+
+    right: 8px;
+    top: 8px;
+
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-cl);
+  }
+  &__icon {
+    width: 11px;
+    transition: fill var(--animation-time) var(--transition-timing-function);
+    &:hover,
+    &:focus {
+      fill: var(--btn-bg-cl-hover);
+    }
+  }
+}
+
+.register-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__agreement {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__button {
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    background: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+    color: var(--light-cl);
+    transition: background var(--animation-time)
+      var(--transition-timing-function);
+    &:hover {
+      background: #188ce8;
+    }
+  }
+  &__desc {
+    display: block;
+    color: var(--light-text-cl);
+  }
+  &__label {
+    @include typography($fs: 12px, $lh: 14px, $ls: 0.01em);
+    margin-bottom: 4px;
+
+    color: var(--light-text-cl);
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  &__icon-checked {
+    opacity: 1;
+  }
+  &__icon-unchecked {
+    opacity: 0;
+    transition: opacity var(--animation-time) var(--transition-timing-function);
+  }
+  &__input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    width: 448px;
+    height: 40px;
+    text-indent: 42px;
+    transition: outline var(--animation-time) var(--transition-timing-function);
+    &:focus-visible {
+      outline: 1px solid var(--accent-cl);
+    }
+  }
+  &__field {
+    position: relative;
+  }
+  &__link {
+    color: var(--accent-cl);
+    text-decoration: underline;
+    line-height: calc(24 / 14);
+  }
+  &__message {
+    height: 120px;
+    text-indent: 0;
+    font-size: 12px;
+    padding: 16px 12px;
+    &::placeholder {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+      letter-spacing: 0.01em;
+
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+  &__svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+  }
+  &__title {
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--main-text-cl);
+  }
+}
+.register-form__input:focus-visible ~ .register-form__svg {
+  fill: var(--accent-cl);
+}
+
+.register-form__icon--checked {
+  opacity: 0;
+  transition: opacity var(--animation-time) var(--transition-timing-function);
+}
+
+.register-form__checkbox:checked
+  + .register-form__icons
+  .register-form__icon--checked {
+  opacity: 1;
+}

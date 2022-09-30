@@ -1,0 +1,84 @@
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+.footer {
+  background-color: var(--transparent-bg-cl);
+  padding: 60px 0;
+  &__address {
+    @include typography($lh: 24px);
+    color: var(--light-cl);
+  }
+  &__contact {
+    @include typography($lh: 24px);
+    color: rgba(255, 255, 255, 0.6);
+
+    transition: color var(--animation-time) var(--transition-timing-function);
+    &:hover,
+    &focus {
+      color: var(--accent-cl);
+    }
+  }
+  &__email {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: var(--transparent-bg-cl);
+    width: 358px;
+    height: 50px;
+    display: block;
+    text-indent: 15px;
+    color: var(--light-cl);
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  &__subscribe-button {
+    @include typography($fw: 700, $fs: 16px, $lh: 30px, $ls: 0.06em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 200px;
+    height: 50px;
+    color: var(--light-cl);
+    background: var(--accent-cl);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+  &__subscribe-wrapper {
+    display: flex;
+    gap: 12px;
+  }
+  &__text {
+    @include typography($fw: 700);
+    text-transform: uppercase;
+    color: var(--light-cl);
+    margin-bottom: 20px;
+  }
+  &__wrapper-address {
+    margin-right: 70px;
+  }
+
+  &__wrapper-subscribe {
+    margin-left: auto;
+  }
+  &__span {
+    @include typography($fw: 700, $lh: 16px);
+    text-transform: uppercase;
+    color: var(--light-cl);
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__logo {
+    margin-bottom: 20px;
+    display: block;
+  }
+}

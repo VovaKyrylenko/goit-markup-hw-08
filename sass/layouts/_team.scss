@@ -1,0 +1,33 @@
+.team {
+  background-color: var(--ourteam-bg-cl);
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+  &__item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--light-cl);
+    max-width: calc((100% - (30px * 3)) / 4);
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    margin: auto;
+  }
+  &__name {
+    @include typography($fw: 500, $fs: 16px, $lh: 19px);
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  &__post {
+    @include typography($fs: 16px, $lh: 19px);
+    text-align: center;
+    color: var(--light-text-cl);
+    margin-bottom: 16px;
+  }
+}

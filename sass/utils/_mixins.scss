@@ -1,0 +1,22 @@
+@mixin section($pt: 94px, $pb: 94px) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+
+@mixin container($w: 1200px, $padding: 15px, $margin: auto) {
+  width: $w;
+  padding: 0 $padding;
+  margin: $margin;
+}
+
+@mixin typography($ff: Roboto, $fw: 400, $fs: 14px, $lh: 24px, $ls: 0.03em) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh / $fs;
+  letter-spacing: $ls;
+}
+
+@mixin social-links-background($background: rgba(255, 255, 255, 0.1)) {
+  background-color: rgba(255, 255, 255, 0.1);
+}

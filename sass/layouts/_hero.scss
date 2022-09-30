@@ -1,0 +1,41 @@
+.hero {
+  background-image: linear-gradient(var(--overlay-hero), var(--overlay-hero)),
+    url("../images/background/hero-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 200px 0;
+  max-width: 1600px;
+  margin: auto;
+  position: relative;
+  &__title {
+    @include typography(
+      $ff: Roboto,
+      $fw: 900,
+      $fs: 44px,
+      $lh: 60px,
+      $ls: 0.06em
+    );
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--light-cl);
+    width: 696px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  &__button {
+    @include typography(
+      $ff: Roboto,
+      $fw: 700,
+      $fs: 16px,
+      $lh: 30px,
+      $ls: 0.06em
+    );
+    background-color: var(--accent-cl);
+    color: var(--light-cl);
+    padding: 10px 32px;
+    display: flex;
+    margin: auto;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
