@@ -1,4 +1,5 @@
 .team {
+  @include section($pt: 94px, $pb: 94px);
   background-color: var(--ourteam-bg-cl);
 
   &__image {

@@ -1,5 +1,5 @@
 .services.section {
-  @include section($pt: 0);
+  @include section($pt: 0, $pb: 94px);
   display: none;
   @media screen and (min-width: 768px) {
     display: none;
