@@ -3,10 +3,16 @@
   padding-bottom: $pb;
 }
 
-@mixin container($w: 1200px, $padding: 15px, $margin: auto) {
-  width: $w;
+@mixin container($w: 450px, $padding: 15px, $margin: auto) {
+  max-width: $w;
   padding: 0 $padding;
   margin: $margin;
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
 }
 
 @mixin typography($ff: Roboto, $fw: 400, $fs: 14px, $lh: 24px, $ls: 0.03em) {

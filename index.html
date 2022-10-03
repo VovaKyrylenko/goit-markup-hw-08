@@ -22,7 +22,7 @@
 
 <body>
   <header class="header">
-    <div class="header__container">
+    <div class="header__container container">
       <a href="index.html" class="logo">Web<span class="logo__span logo__span--dark">Studio</span></a>
       <nav class="nav">
         <ul class="nav__list">
@@ -53,6 +53,11 @@
             +38 096 111 11 11</a>
         </li>
       </ul>
+      <button type="button" class="header__button js-open-menu">
+        <svg width="44" height="44">
+          <use href="./images/icons/symbol-defs.svg#icon-menu"></use>
+        </svg>
+      </button>
     </div>
   </header>
   <main>
@@ -68,7 +73,7 @@
       <div class="container">
         <h2 class="visually-hidden">Наші привелегії</h2>
         <ul class="privilege__fatures-list">
-          <li>
+          <li class="privilege__item">
             <div class="privilege__wrp">
               <svg width="70" height="70">
                 <use href="./images/icons/symbol-defs.svg#icon-antenna"></use>
@@ -80,7 +85,7 @@
               формування позиції.
             </p>
           </li>
-          <li>
+          <li class="privilege__item">
             <div class="privilege__wrp">
               <svg width="70" height="70">
                 <use href="./images/icons/symbol-defs.svg#icon-clock"></use>
@@ -92,7 +97,7 @@
               тягне у себе.
             </p>
           </li>
-          <li>
+          <li class="privilege__item">
             <div class="privilege__wrp">
               <svg width="70" height="70">
                 <use href="./images/icons/symbol-defs.svg#icon-diagram"></use>
@@ -103,7 +108,7 @@
               Так само консультація з широким активом значною мірою зумовлює.
             </p>
           </li>
-          <li>
+          <li class="privilege__item">
             <div class="privilege__wrp">
               <svg width="70" height="70">
                 <use href="./images/icons/symbol-defs.svg#icon-astronaut"></use>
@@ -154,8 +159,20 @@
         <h2 class="title">Наша команда</h2>
         <ul class="team__list">
           <li class="team__item">
-            <img src="./images/team-card-1.jpg" alt="Фото Ігоря Дем'яненко" class="team__image" width="270"
-              height="260">
+            <picture class="team__image">
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio/portfolio-1-l-@1x.webp 1x, ./images/portfolio/portfolio-1-l-@2x.webp 2x"
+                type="image/webp" />
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio/portfolio-1-m-@1x.webp 1x, ./images/portfolio/portfolio-1-m-@2x.webp 2x"
+                type="image/webp" />
+              <source
+                srcset="./images/portfolio/portfolio-1-s-@1x.webp 1x, ./images/portfolio/portfolio-1-s-@2x.webp 2x"
+                type="image/webp" />
+              <img class="team__image" src="./images/portfolio/portfolio-1-s-@1x.webp" />
+            </picture>
+            <!-- <img src="./images/team-card-1.jpg" alt="Фото Ігоря Дем'яненко" class="team__image" width="270"
+              height="260"> -->
             <h3 class="team__name">Ігор Дем'яненко</h3>
             <p class="team__post">Product desinger</p>
             <ul class="social-links">
@@ -190,7 +207,18 @@
             </ul>
           </li>
           <li class="team__item">
-            <img src="./images/team-card-2.jpg" alt="Фото Ольги Рєпіної" class="team__image" width="270" height="260">
+            <picture class="team__image">
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio/portfolio-2-l-@1x.webp 1x, ./images/portfolio/portfolio-2-l-@2x.webp 2x"
+                type="image/webp" />
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio/portfolio-2-m-@1x.webp 1x, ./images/portfolio/portfolio-2-m-@2x.webp 2x"
+                type="image/webp" />
+              <source
+                srcset="./images/portfolio/portfolio-2-s-@1x.webp 1x, ./images/portfolio/portfolio-2-s-@2x.webp 2x"
+                type="image/webp" />
+              <img class="team__image" src="./images/portfolio/portfolio-1-s-@1x.webp" />
+            </picture>
             <h3 class="team__name">Ольга Рєпіна</h3>
             <p class="team__post">Frontend developer</p>
             <ul class="social-links">
@@ -225,7 +253,18 @@
             </ul>
           </li>
           <li class="team__item">
-            <img src="./images/team-card-3.jpg" alt="Фото Миколи Тарасова" class="team__image" width="270" height="260">
+            <picture class="team__image">
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio/portfolio-3-l-@1x.webp 1x, ./images/portfolio/portfolio-3-l-@2x.webp 2x"
+                type="image/webp" />
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio/portfolio-3-m-@1x.webp 1x, ./images/portfolio/portfolio-3-m-@2x.webp 2x"
+                type="image/webp" />
+              <source
+                srcset="./images/portfolio/portfolio-3-s-@1x.webp 1x, ./images/portfolio/portfolio-3-s-@2x.webp 2x"
+                type="image/webp" />
+              <img class="team__image" src="./images/portfolio/portfolio-1-s-@1x.webp" />
+            </picture>
             <h3 class="team__name"> Микола Тарасов</h3>
             <p class="team__post">Marketing</p>
             <ul class="social-links">
@@ -260,7 +299,18 @@
             </ul>
           </li>
           <li class="team__item">
-            <img src="./images/team-card-4.jpg" alt="Фото Михайла Єрмаков" class="team__image" width="270" height="260">
+            <picture class="team__image">
+              <source media="(min-width: 1200px)"
+                srcset="./images/portfolio/portfolio-4-l-@1x.webp 1x, ./images/portfolio/portfolio-4-l-@2x.webp 2x"
+                type="image/webp" />
+              <source media="(min-width: 768px)"
+                srcset="./images/portfolio/portfolio-4-m-@1x.webp 1x, ./images/portfolio/portfolio-4-m-@2x.webp 2x"
+                type="image/webp" />
+              <source
+                srcset="./images/portfolio/portfolio-4-s-@1x.webp 1x, ./images/portfolio/portfolio-4-s-@2x.webp 2x"
+                type="image/webp" />
+              <img class="team__image" src="./images/portfolio/portfolio-1-s-@1x.webp" />
+            </picture>
             <h3 class="team__name">Михайло Єрмаков</h3>
             <p class="team__post">UI Desinger</p>
             <ul class="social-links">
@@ -298,51 +348,53 @@
       </div>
     </section>
     <section class="clients section">
-      <h2 class="title">Постійні клієнти</h2>
-      <ul class="clients__list">
-        <li class="clients__item">
-          <a href="">
-            <svg class="clients__icon">
-              <use href="./images/icons/symbol-defs.svg#icon-Logo"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients__item">
-          <a href="">
-            <svg class="clients__icon">
-              <use href="./images/icons/symbol-defs.svg#icon-Logo-1"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients__item">
-          <a href="">
-            <svg class="clients__icon">
-              <use href="./images/icons/symbol-defs.svg#icon-Logo-2"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients__item">
-          <a href="">
-            <svg class="clients__icon">
-              <use href="./images/icons/symbol-defs.svg#icon-Logo-3"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients__item">
-          <a href="">
-            <svg class="clients__icon">
-              <use href="./images/icons/symbol-defs.svg#icon-Logo-4"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients__item">
-          <a href="">
-            <svg class="clients__icon">
-              <use href="./images/icons/symbol-defs.svg#icon-Logo-5"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <div class="container">
+        <h2 class="title">Постійні клієнти</h2>
+        <ul class="clients__list">
+          <li class="clients__item">
+            <a href="">
+              <svg class="clients__icon">
+                <use href="./images/icons/symbol-defs.svg#icon-Logo"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients__item">
+            <a href="">
+              <svg class="clients__icon">
+                <use href="./images/icons/symbol-defs.svg#icon-Logo-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients__item">
+            <a href="">
+              <svg class="clients__icon">
+                <use href="./images/icons/symbol-defs.svg#icon-Logo-2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients__item">
+            <a href="">
+              <svg class="clients__icon">
+                <use href="./images/icons/symbol-defs.svg#icon-Logo-3"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients__item">
+            <a href="">
+              <svg class="clients__icon">
+                <use href="./images/icons/symbol-defs.svg#icon-Logo-4"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients__item">
+            <a href="">
+              <svg class="clients__icon">
+                <use href="./images/icons/symbol-defs.svg#icon-Logo-5"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
     </div>
     <div class="backdrop is-hidden" data-modal>
@@ -406,7 +458,43 @@
         </form>
       </div>
     </div>
-    </div>
+    <div class="menu js-menu-container">
+      <button class="menu__button js-close-menu">
+        <svg class="menu__icon" width="40px" height="40px">
+          <use href="./images/icons/symbol-defs.svg#icon-close-menu"></use>
+        </svg>
+      </button>
+      <nav class="nav menu__nav">
+        <ul class="menu-nav__list-menu">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link menu-nav__link--active menu-nav__link">Студія</a>
+          </li>
+          <li class="nav__item">
+            <a href="portfolio.html" class="nav__link menu-nav__link">Портфоліо</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts" class="nav__link menu-nav__link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu__wrapper">
+        <ul class="contacts">
+          <li class="contacts__item">
+            <a href="tel:+380961111111" class="contacts__link">
+              +38 096 111 11 11</a>
+          </li>
+          <li class="contacts__item">
+            <a href="mailto:info@devstudio.com" class="contacts__link">
+              info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="menu__list">
+          <li class="menu__item"><a href="" class="menu__link">Instagram</a></li>
+          <li class="menu__item"><a href="" class="menu__link">Twitter</a></li>
+          <li class="menu__item"><a href="" class="menu__link">Facebook</a></li>
+          <li class="menu__item"><a href="" class="menu__link">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
   </main>
   <footer id="contacts" class="footer">
@@ -416,7 +504,7 @@
         <address>
           <ul class="footer__list">
             <li>
-              <a href="https://goo.gl/maps/QiQsdTo4LieZQjPv9" class="footer__address footer__contact">м. Київ,
+              <a href="https://goo.gl/maps/QiQsdTo4LieZQjPv9" class="footer__address">м. Київ,
                 пр-т
                 Лесі
                 Українки, 26</a>
@@ -480,6 +568,10 @@
       </div>
     </div>
   </footer>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script defer src="js/mobile-menu.js"></script>
   <script src="./js/modal.js"></script>
 </body>
 

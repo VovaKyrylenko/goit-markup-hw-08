@@ -1,8 +1,12 @@
 .filter {
   display: flex;
+  flex-wrap: wrap;
   margin: auto;
   gap: 8px;
-  justify-content: center;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+  // justify-content: center;
   padding: 0;
   margin-bottom: 50px;
   &__btn {
@@ -26,10 +30,12 @@
   }
 }
 .portfolio {
+  @include section($pt: 60px, $pb: 60px);
   &__description {
     font-size: 18px;
-    line-height: calc(28 / 18);
+    line-height: calc(30 / 18);
     color: var(--light-cl);
+    margin-bottom: auto;
   }
   &__img {
     display: block;
@@ -37,7 +43,17 @@
     height: auto;
   }
   &__item {
-    width: 370px;
+    height: 100%;
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 30px) / 2);
+      height: 100%;
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - (30px * 2)) / 3);
+      height: 100%;
+    }
+    width: 100%;
+    border-bottom: 1px solid var(--border-cl);
     transition-property: box-shadow;
     transition-duration: var(--animation-time);
     transition-timing-function: var(--transition-timing-function);
@@ -49,7 +65,7 @@
   }
   &__list {
     display: flex;
-    width: 1170px;
+    width: 100%;
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -86,8 +102,8 @@
     color: var(--light-text-cl);
   }
   &__wrapper {
+    height: 100%;
     padding: 20px 24px;
-    border-bottom: 1px solid var(--border-cl);
     border-right: 1px solid var(--border-cl);
     border-left: 1px solid var(--border-cl);
   }

@@ -2,8 +2,9 @@
   &__fatures-list {
     display: flex;
     gap: 30px;
-    width: 1170px;
+    width: 100%;
     margin: auto;
+    flex-wrap: wrap;
   }
   &__text {
     line-height: calc(24 / 14);
@@ -15,6 +16,13 @@
     text-transform: uppercase;
     font-size: inherit;
     margin-bottom: 10px;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
   &__wrp {
     display: flex;
@@ -25,5 +33,14 @@
     margin-bottom: 30px;
     background-color: var(--ourteam-bg-cl);
     border-radius: 4px;
+  }
+  &__item {
+    @media screen and (min-width: 768px) {
+      width: calc((100% - (30px * 1)) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - (30px * 3)) / 4);
+    }
+    width: 100%;
   }
 }

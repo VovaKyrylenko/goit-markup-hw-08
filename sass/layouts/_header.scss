@@ -6,6 +6,13 @@
 
 .header {
   border-bottom: 1px solid #ececec;
+  &__button {
+    margin-left: auto;
+    background-color: transparent;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
 }
 
 .nav__link--active {
@@ -26,12 +33,20 @@
 }
 
 .nav__list {
-  margin-left: 93px;
-  display: flex;
+  display: none;
+  margin-left: 87px;
   gap: 50px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 51px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .nav__link {
+  @include typography($lh: 16px, $fw: 500);
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -50,19 +65,28 @@
 
 .header__contacts {
   margin-left: auto;
-  display: flex;
+  display: none;
   gap: 50px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-left: auto;
+  }
 }
 
 .header__contact {
+  @include typography($fs: 12px, $lh: 16px, $fw: 500, $ls: 0.02em);
   color: var(--light-text-cl);
   display: flex;
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
-  font-weight: 500;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
   transition-property: color;
   transition-duration: var(--animation-time);
   transition-timing-function: var(--transition-timing-function);
@@ -70,6 +94,10 @@
   &:hover,
   &:focus {
     color: var(--accent-cl);
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
   }
 }
 

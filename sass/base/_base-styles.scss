@@ -9,6 +9,12 @@ body {
 
 .container {
   @include container;
+  @media screen and (min-width: 768px) {
+    @include container($w: 738px);
+  }
+  @media screen and (min-width: 1200px) {
+    @include container($w: 1170px);
+  }
 }
 
 .section {

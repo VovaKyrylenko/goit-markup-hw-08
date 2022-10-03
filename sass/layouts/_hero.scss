@@ -1,9 +1,47 @@
 .hero {
   background-image: linear-gradient(var(--overlay-hero), var(--overlay-hero)),
-    url("../images/background/hero-background.jpg");
+    url("/images/background/hero/hero_s_@1x.webp");
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(var(--overlay-hero), var(--overlay-hero)),
+      url("/images/background/hero/hero_s_@2x.webp");
+  }
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(var(--overlay-hero), var(--overlay-hero)),
+      url("/images/background/hero/hero_m_@1x.webp");
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          var(--overlay-hero),
+          var(--overlay-hero)
+        ),
+        url("/images/background/hero/hero_m_@2x.webp");
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(var(--overlay-hero), var(--overlay-hero)),
+      url("/images/background/hero/hero_l_@1x.webp");
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          var(--overlay-hero),
+          var(--overlay-hero)
+        ),
+        url("/images/background/hero/hero_l_@2x.webp");
+    }
+  }
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 200px 0;
+  padding: 118px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
   max-width: 1600px;
   margin: auto;
   position: relative;
@@ -11,16 +49,26 @@
     @include typography(
       $ff: Roboto,
       $fw: 900,
-      $fs: 44px,
-      $lh: 60px,
+      $fs: 26px,
+      $lh: 42px,
       $ls: 0.06em
     );
     text-align: center;
     text-transform: uppercase;
     color: var(--light-cl);
-    width: 696px;
+    max-width: 360px;
     margin: auto;
     margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+      @include typography(
+        $ff: Roboto,
+        $fw: 900,
+        $fs: 44px,
+        $lh: 60px,
+        $ls: 0.06em
+      );
+      max-width: 696px;
+    }
   }
   &__button {
     @include typography(
