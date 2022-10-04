@@ -1,5 +1,7 @@
 .privilege {
-  @include section($pt: 94px, $pb: 94px);
+  @media screen and (min-width: 1200px) {
+    @include section($pt: 94px, $pb: 94px);
+  }
   &__fatures-list {
     display: flex;
     gap: 30px;

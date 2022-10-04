@@ -1,11 +1,12 @@
 .services.section {
-  @include section($pt: 0, $pb: 94px);
+  @include section($pt: 0);
   display: none;
   @media screen and (min-width: 768px) {
     display: none;
   }
   @media screen and (min-width: 1200px) {
     display: block;
+    @include section($pt: 0, $pb: 94px);
   }
 }
 .services {

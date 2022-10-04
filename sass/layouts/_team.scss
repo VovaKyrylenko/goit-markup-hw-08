@@ -1,5 +1,7 @@
 .team {
-  @include section($pt: 94px, $pb: 94px);
+  @media screen and (min-width: 1200px) {
+    @include section($pt: 94px, $pb: 94px);
+  }
   background-color: var(--ourteam-bg-cl);
 
   &__image {

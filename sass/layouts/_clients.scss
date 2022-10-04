@@ -1,5 +1,7 @@
 .clients {
-  @include section($pt: 94px, $pb: 94px);
+  @media screen and (min-width: 1200px) {
+    @include section($pt: 94px, $pb: 94px);
+  }
   &__item {
     height: 92px;
     width: calc((100% - (30px * 1)) / 2);

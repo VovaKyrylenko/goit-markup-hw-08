@@ -62,6 +62,7 @@
   }
   &__list {
     display: flex;
+    flex-wrap: wrap;
   }
   &__nav {
     margin-bottom: auto;
