@@ -877,10 +877,10 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__container {
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-align: baseline;
@@ -897,6 +897,10 @@ body {
         -ms-flex-align: baseline;
             align-items: baseline;
     gap: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -929,17 +933,22 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: auto;
+  gap: 60px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer__general-wrpapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 165px;
   }
 }
@@ -953,6 +962,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin: 0;
   }
 }
 .footer__email {
@@ -1055,7 +1065,7 @@ body {
     text-align: left;
   }
 }
-.footer____wrapper-social-links {
+.footer__wrapper-social-links {
   margin: auto;
 }
 .footer__wrapper-subscribe {
@@ -1064,11 +1074,13 @@ body {
 @media screen and (min-width: 768px) {
   .footer__wrapper-subscribe {
     width: 450px;
+    margin: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__wrapper-subscribe {
     width: 570px;
+    margin: 0;
     margin-left: auto;
   }
 }
@@ -1239,6 +1251,15 @@ body {
   letter-spacing: 0.03em;
   display: block;
   color: var(--light-text-cl);
+}
+@media screen and (min-width: 1200px) {
+  .register-form__desc {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7142857143;
+    letter-spacing: 0.03em;
+  }
 }
 .register-form__label {
   font-family: Roboto;

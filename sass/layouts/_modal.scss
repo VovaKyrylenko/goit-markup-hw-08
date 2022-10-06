@@ -106,6 +106,9 @@
     @include typography($fs: 12px, $lh: 14px);
     display: block;
     color: var(--light-text-cl);
+    @media screen and (min-width: 1200px) {
+      @include typography($fs: 14px, $lh: 24px);
+    }
   }
   &__label {
     @include typography($fs: 12px, $lh: 14px, $ls: 0.01em);
